@@ -1,13 +1,20 @@
 {
   "name": "vue2-monaco-editor",
+  "description": "vue.js 2.x可用的monaco-editor（基于VS Code的代码编辑器）",
+  "author": "zhanghaofei",
   "version": "0.0.1",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "inspect": "vue-cli-service inspect",
+    "examples:serve": "vue-cli-service serve --mode=examples",
+    "examples:inspect": "vue-cli-service inspect --mode=examples"
+
   },
   "dependencies": {
+    "monaco-editor": "^0.14.3",
     "vue": "^2.5.17"
   },
   "devDependencies": {
