@@ -7,11 +7,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:custom": "vue-cli-service build --target=lib src/index.js --name=vue2-monaco-editor.js",
     "lint": "vue-cli-service lint",
     "inspect": "vue-cli-service inspect",
     "examples:serve": "vue-cli-service serve --mode=examples",
     "examples:inspect": "vue-cli-service inspect --mode=examples"
-
   },
   "dependencies": {
     "monaco-editor": "^0.14.3",
@@ -25,6 +25,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "monaco-editor-webpack-plugin": "^1.5.4",
     "vue-template-compiler": "^2.5.17"
   }
 }
