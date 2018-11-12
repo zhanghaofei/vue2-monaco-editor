@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{ code }}
+    <MonacoEditor></MonacoEditor>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--<script src="../../node_modules/monaco-editor/min/vs/editor/main"></script>-->
+<script src="../../dist/MonacoEditor.umd.js"></script>
+<script>
+    Vue.use(MonacoEditor)
+    var app = new Vue({
+        el: '#app',
+        data: {
+            code: 'hello '
+        }
+    })
+</script>
+</html>

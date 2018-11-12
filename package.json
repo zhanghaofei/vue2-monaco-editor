@@ -9,7 +9,9 @@
     "serve": "vue-cli-service serve ./src/b.js",
     "build": "vue-cli-service build",
     "build:lib": "vue-cli-service build --target lib --name MonacoEditor ./src/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "examples:serve": "vue-cli-service serve --mode=examples",
+    "examples:inspect": "vue-cli-service inspect --mode=examples"
   },
   "dependencies": {
     "monaco-editor": "^0.14.3",
