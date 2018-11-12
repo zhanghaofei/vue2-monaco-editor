@@ -1,53 +1,26 @@
 <template>
-  <div :id="editorId" class="editor" :style="{ width, height }"></div>
+  <div id="editor">{{value}}</div>
 </template>
 
 <script>
-// import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
-import * as monaco from 'monaco-editor'
 export default {
   name: 'MonacoEditor',
   props: {
-    width: {
-      type: String,
-      default: '100%'
-    },
-    height: {
-      type: String,
-      default: '100%'
-    },
     value: {
       type: String,
-      default: ''
-    },
-    options: {
-      type: Object
+      default: 'Vue2 Monaco Editor'
     }
   },
   data () {
     return {
     }
-  },
-  computed: {
-    editorId () {
-      return `editor${this._uid}`
-    }
-  },
-  methods: {
-  },
-  mounted () {
-    this.options.value = this.value
-    this.editor = monaco.editor.create(document.getElementById(this.editorId), this.options)
-    const vm = this
-    this.editor.onDidChangeModelContent(function (e) {
-      vm.$emit('onDidChangeModelContent', e)
-      vm.$emit('input', vm.editor.getValue())
-    })
-    this.editor.onMouseMove(function (e) {
-      vm.$emit('onMouseMove', e)
-    })
-    //
-    this.getSelections = this.editor.getSelections
   }
 }
 </script>
+
+<style>
+  .editor{
+    color: red;
+    font-size: 20px;
+  }
+</style>
